@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: angular1
+    build: ./docker/node
+    ports:
+      - 4200:4200
+    volumes:
+      - ./server:/app
+    stdin_open: true
+    tty: true     
